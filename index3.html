@@ -45,20 +45,38 @@
    })
  }
  }
- async function sharef()
+ async function sharepublic()
   {let options = {
   encrypt: false
 }
-   try{var tpost=document.getElementById("post").value;
+   try{var tpost=document.getElementById("postpublic").value;
        var d=new Date;
        var dd = d.getDate().toString()+d.getMonth().toString()+d.getFullYear().toString()+d.getHours().toString()+d.getMinutes().toString()+d.getSeconds().toString();
        //var ddd = '&nbsp'+d.getDate().toString()+d.getMonth().toString() +d.getFullYear().toString() +d.getHours().toString() +d.getMinutes().toString() +d.getSeconds().toString();
       
-       var filename='post'+dd+'.txt';
+       var filenamepublic='post'+dd+'.txt';
       // document.getElementById("post").value=filename;
-    blockstack.putFile(filename, tpost, options);
-       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(filename, options);
-      document.getElementById("turl1").innerHTML=filename;}
+    blockstack.putFile(filenamepublic, tpost, options);
+       document.getElementById("turlpublic").innerHTML=await blockstack.getFileUrl(filenamepublic, options);
+      document.getElementById("turl1public").innerHTML=filenamepublic;}
+   catch(err){
+alert(err.message);}
+  
+  }
+ async function shareprivate()
+  {let options = {
+  encrypt: false
+}
+   try{var tpost=document.getElementById("postprivate").value;
+       var d=new Date;
+       var dd = d.getDate().toString()+d.getMonth().toString()+d.getFullYear().toString()+d.getHours().toString()+d.getMinutes().toString()+d.getSeconds().toString();
+       //var ddd = '&nbsp'+d.getDate().toString()+d.getMonth().toString() +d.getFullYear().toString() +d.getHours().toString() +d.getMinutes().toString() +d.getSeconds().toString();
+      
+       var filenameprivate='post'+dd+'.txt';
+      // document.getElementById("post").value=filename;
+    blockstack.putFile(filenameprivate, tpost, options);
+       document.getElementById("turlprivate").innerHTML=await blockstack.getFileUrl(filenameprivate, options);
+      document.getElementById("turl1private").innerHTML=filenameprivate;}
    catch(err){
 alert(err.message);}
   
@@ -117,7 +135,7 @@ catch(err){
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1527</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1545</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
@@ -126,20 +144,39 @@ catch(err){
  <img id="avatar-image" src="" width="100" height="150"/>
 <br/>
  <br/>
-   <p > publish some text </p>
- <input align="center" type="text"  id="post" " />
- <input align="center" type="button" value="share" id="shareb" onclick="sharef();" />
+   <p > publish some Public text </p>
+ <input align="center" type="text"  id="postpublic" " />
+ <input align="center" type="button" value="sharepublic" id="sharebpublic" onclick="sharepublic();" />
   <br/>
    <br/> 
-  <p > URL of the added post </p>   
-   <p id="turl"> </p>                                                                               
+  <p > URL of the added post public </p>   
+   <p id="turlpublic"> </p>                                                                               
      
                
   <p >  Post </p>   
-     <p id="turl1">  </p>      
+     <p id="turl1public">  </p>      
                
  <p > show a post </p>
   <br/>
+                  
+  <p > publish some Private text </p>
+ <input align="center" type="text"  id="postprivate" " />
+ <input align="center" type="button" value="shareprivate" id="sharebprivate" onclick="shareprivate();" />
+  <br/>
+   <br/> 
+  <p > URL of the added post private</p>   
+   <p id="turlprivate"> </p>                                                                               
+     
+               
+  <p >  Post </p>   
+     <p id="turl1private">  </p>      
+               
+ <p > show a post </p>
+  <br/>
+                  
+                  
+                  
+                  
  <input align="center" type="text"  id="posttoshow" />
  <input align="center" type="button" value="show" id="showb" onclick="showf();" />
 <p> here your post </p> 
