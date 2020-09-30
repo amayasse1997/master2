@@ -70,7 +70,8 @@ input[type=text] {
        var filenamepub='postpub'+dd+'.txt';
       // document.getElementById("post").value=filename;
     blockstack.putFile(filenamepub, tpost, options);
-       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(filenamepub, options);}
+       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(filenamepub, options);
+       document.getElementById("turll").innerHTML=filenamepub;}
    catch(err){
 alert(err.message);}
   
@@ -87,7 +88,8 @@ alert(err.message);}
        var filenamepriv='postpriv'+dd+'.txt';
       // document.getElementById("post").value=filename;
     blockstack.putFile(filenamepriv, tpost, options);
-       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(filenamepriv, options);}
+       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(filenamepriv, options);
+       document.getElementById("turll").innerHTML=filenamepriv;}
    catch(err){
 alert(err.message);}
   
@@ -185,6 +187,8 @@ catch(err){
    <br/> 
   <p > URL of the added post </p>   
    <p id="turl"> URL </p>  
+  <p > Post </p>   
+   <p id="turll">  </p>  
  <p > show a post </p>
  
   <br/>
