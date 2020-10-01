@@ -123,7 +123,7 @@ alert(err.message);
  
  function listf(){ var listoffiles=' ';
                   document.getElementById("note").innerHTML='display outstanding'    
-  blockstack.listFiles((filename)=>{listoffiles=listoffiles+'<br/>'+filename;
+  blockstack.listFiles((filenamepub)=>{listoffiles=listoffiles+'<br/>'+filenamepub;
    //document.write(filename)
    
     document.getElementById("note").innerHTML=listoffiles
@@ -164,7 +164,7 @@ catch(err){
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 2236</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1406</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
