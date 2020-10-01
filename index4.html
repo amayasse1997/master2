@@ -121,21 +121,21 @@ alert(err.message);
  } }
  
  
- function listf(){ var listoffiles=' ';
+ function listf(){ var listoffilespub=' ';
                   document.getElementById("note").innerHTML='display outstanding'    
   blockstack.listFiles((filenamepub)=>{listoffiles=listoffiles+'<br/>'+filenamepub;
    //document.write(filename)
    
-    document.getElementById("note").innerHTML=listoffiles
+    document.getElementById("note").innerHTML=listoffilespub
          return true}     )                                               
   }
   
-   function listfv(){ var listoffiles=' ';
+   function listfv(){ var listoffilesprv=' ';
                   document.getElementById("notee").innerHTML='display outstanding'    
   blockstack.listFiles((filenamepriv)=>{listoffiles=listoffiles+'<br/>'+filenamepriv;
    //document.write(filename)
    
-    document.getElementById("notee").innerHTML=listoffiles
+    document.getElementById("notee").innerHTML=listoffilesprv
          return true}     )                                               
   }
  
@@ -173,7 +173,7 @@ catch(err){
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1416</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1422</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
