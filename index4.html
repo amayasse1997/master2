@@ -85,11 +85,11 @@ alert(err.message);}
        var d=new Date;
        var dd = d.getDate().toString()+d.getMonth().toString()+d.getFullYear().toString()+d.getHours().toString()+d.getMinutes().toString()+d.getSeconds().toString();
       
-       var filenamepriv='postpriv'+dd+'.txt';
+       var priv='postpriv'+dd+'.txt';
       // document.getElementById("post").value=filename;
-    blockstack.putFile(filenamepriv, tpost, options);
-       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(filenamepriv, options);
-       document.getElementById("turll").innerHTML=filenamepriv;}
+    blockstack.putFile(priv, tpost, options);
+       document.getElementById("turl").innerHTML=await blockstack.getFileUrl(priv, options);
+       document.getElementById("turll").innerHTML=priv;}
    catch(err){
 alert(err.message);}
   
@@ -132,7 +132,7 @@ alert(err.message);
   
    function listfv(){ var listoffilesprv=' ';
                   document.getElementById("notee").innerHTML='display outstanding'    
-  blockstack.listFiles((filenamepriv)=>{listoffilesprv=listoffilesprv+'<br/>'+filenamepriv;
+  blockstack.listFiles((priv)=>{listoffilesprv=listoffilesprv+'<br/>'+priv;
    //document.write(filename)
    
     document.getElementById("notee").innerHTML=listoffilesprv
@@ -173,7 +173,7 @@ catch(err){
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1428</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1433</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
