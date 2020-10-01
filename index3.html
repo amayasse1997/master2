@@ -134,13 +134,6 @@ catch(err){
  }
  
  
- function WriteToFile()
-{
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var s = fso.CreateTextFile("C:\\aaa.txt", true);
-s.WriteLine('*****test****');
-s.Close();
-}
 
 
 
@@ -148,7 +141,7 @@ s.Close();
 </head>
 <body onLoad="WriteToFile()">
 
-<h2 align="center"> welcome.... clik login to enter the application 2258</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1343</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
@@ -159,7 +152,7 @@ s.Close();
  <br/>
    <p > publish some Public text </p>
  <input align="center" type="text"  id="postpublic" " />
- <input align="center" type="button" value="sharepublic" id="sharebpublic" onclick="sharepublic();" />
+ <button align="center" type="button" value="sharepublic" id="sharebpublic" onclick="sharepublic();" />
   <br/>
    <br/> 
   <p > URL of the added post public </p>   
