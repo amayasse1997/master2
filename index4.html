@@ -143,7 +143,7 @@ alert(err.message);
  function deletef(){
   var filetodelete=document.getElementById("posttodelete").value;
   let options = {
-  wasSigned: true
+  wasSigned: false
 }
  try{ blockstack.deleteFile(filetodelete,options)}
  catch(err){
